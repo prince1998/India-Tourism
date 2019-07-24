@@ -1,0 +1,95 @@
+body
+{
+	margin:0px;
+}
+
+h1
+{
+	color: white;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	
+}
+#bars
+{
+	font-size:30px;
+	background-color: white;
+	padding:13px;
+	width: 35px;
+	height: 30px;
+}
+button
+{
+	padding: 0px;
+	margin-left: -1px;
+}
+#arrow
+{
+	font-size: 22px;
+}
+
+.slidenav
+{
+    width: 0;
+    background-color: white;
+    position:fixed;
+    height:100%;
+    overflow-x: hidden;
+	transition: 0.5s;
+	margin-top: 70px;
+	z-index:999;
+}
+.slidenav a
+{
+	display:block;
+	text-decoration: none;
+	color:black;
+	padding:20px 16px;
+	text-align: center;
+	transition: 0.3s;
+}
+.slidenav a:hover 
+{
+    background-color: #555;
+    color: white;
+}
+
+
+.sub
+{
+	margin-left: 250px;
+    width: 200px;
+    background-color: white;
+    position: fixed;
+    overflow-x: hidden;
+	height: auto;
+	z-index:999;
+}
+.sub a
+{
+	display:block;
+	text-decoration: none;
+	color:black;
+	padding: 5px 5px;
+	text-align: center;
+}
+
+.sub a:hover 
+{
+    background-color: #555;
+    color: white;
+}
+#main 
+{
+    transition: margin-left .5s;
+    padding: 0px;
+	margin-top: 70px;
+	position: fixed;
+	margin-left: -5px;
+	border-color: white;
+	z-index: 999;
+}
+a.active
+{
+	background-color: black;
+	color: white;
+}

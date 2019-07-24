@@ -1,0 +1,404 @@
+<html>
+
+<head>
+    <title>
+        West Bengal
+    </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+
+        #double_arrow
+			{
+
+					font-size:30px;
+					border:none;
+					outline: none;
+					background-color: transparent;
+					color: white;
+					font-size: 40;
+
+			}
+
+			.slideholder
+			{
+				width:1380px;
+				height:731px;
+				margin-left: auto;
+				margin-right: auto;
+				overflow:hidden;
+			}
+			.imageholder
+			{
+				width:10000px;
+				height:731px;
+				clear:both;
+				position: relative;
+
+				-webkit-transition: left 2s;
+				-moz-transition: left 2s;
+				-o-transition: left 2s;
+				transition: left 2s
+			}
+			.sliderimage
+			{
+				float:left;
+				position: relative;
+				width:auto;
+				height:auto;
+				max-width: 100%;
+
+			}
+			.buttonholder
+			{
+				position:relative;
+				top:-110px;
+				text-align: center;
+			}
+			.button
+			{
+				display:inline-block;
+				background-color: white;
+				border-radius: 15px;
+				height: 30px;
+				width: 30px;
+			}
+			.button:hover
+			{
+				background-color: black;
+			}
+
+		#slide1:target~ .imageholder
+        {
+            left: 0px;
+        }
+
+        #slide2:target~ .imageholder
+        {
+            left: -1380px;
+        }
+
+        #slide3:target~ .imageholder
+        {
+            left: -2760px;
+        }
+	    #slide4:target~ .imageholder
+        {
+            left: -4140px;
+        }
+		h1
+		{
+			position: fixed;
+			background-color: whitesmoke;
+			height:65px;
+			border-bottom: 5px solid black;
+			width:100%;
+			z-index: 999;
+			text-align: center;
+			color: black;
+		}
+
+		.div1
+		{
+			display: none;
+			margin-left: 70px;
+			margin-top: -550px;
+			height:250px;
+			width: 250px;
+			position: absolute;
+			font-size: 20;
+			color: white;
+			transition: margin-right 0.5s
+		}
+
+		.div2
+		{
+			height:0px;
+			width:0px;
+			position: absolute;
+			transition: 0.5s;
+			background-image: url(wb/back.jpg);
+			margin-top: 550px;
+			overflow-x: scroll;
+			font-size: 20;
+			color: white;
+		}
+
+
+		.info
+		{
+				display:inline-block;
+				background-color: white;
+				height: 40px;
+				width: 40px;
+				text-decoration: none;
+				text-align: center;
+				color: black;
+		}
+
+		.close
+		{
+				display:inline-block;
+				background-color: white;
+				height: 50px;
+				width: 60px;
+				text-decoration: none;
+				text-align: center;
+				color: black;
+				position: fixed;
+		}
+		.close:hover
+		{
+				background-color: black;
+				color: white;
+		}
+
+
+	</style>
+
+
+    <script>
+
+
+        function onClick1()
+			{
+				document.getElementById("change1").style.display = "block";
+				document.getElementById("change2").style.display = "none";
+				document.getElementById("change3").style.display = "none";
+				document.getElementById("change4").style.display = "none";
+			}
+			function onClick2()
+			{
+				document.getElementById("change1").style.display = "none";
+				document.getElementById("change2").style.display = "block";
+				document.getElementById("change3").style.display = "none";
+				document.getElementById("change4").style.display = "none";
+			}
+			function onClick3()
+			{
+				document.getElementById("change2").style.display = "none";
+				document.getElementById("change3").style.display = "block";
+				document.getElementById("change1").style.display = "none";
+				document.getElementById("change4").style.display = "none";
+			}
+			function onClick4()
+			{
+				document.getElementById("change4").style.display = "block";
+				document.getElementById("change2").style.display = "none";
+				document.getElementById("change3").style.display = "none";
+				document.getElementById("change1").style.display = "none";
+			}
+			function onClick5()
+			{
+				var a = document.getElementById("change5");
+				a.style.width = "1380px";
+				a.style.height = "731px";
+				a.style.marginTop = "-765px";
+			}
+			function onClick6()
+			{
+				var a = document.getElementById("change5");
+				a.style.width = "0px";
+				a.style.height = "0px";
+				a.style.marginTop = "550px";
+			}
+
+		</script>
+
+
+</head>
+
+<body bgcolor="	#E0FFFF" onLoad="javascript:onClick1()">
+
+
+    <script src="javascript.js"></script>
+
+    <div style="height:20px;margin-top: -22px">
+        <h1>Tourism India</h1>
+    </div>
+
+
+    <div id="menu" class="slidenav">
+        <a href="javascript:void(0)" onClick="closeNav()">Close &times;</a>
+
+
+        <a href="westbengal_t.html" class="active" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; West Bengal &nbsp; &nbsp; &nbsp;
+            &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+        <a href="kerela_t.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Kerela &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+        <a href="./form.html"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Form &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+        <a href="./About.html"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; About &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+    </div>
+
+    <div id="main">
+        <button onClick="openNav()"><i id="bars" class="fa fa-bars"></i></button>
+    </div>
+
+
+    <div id="submenu1" style="display: none" class="sub">
+        <a href="westbengal_t.html" class="active" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Tourism</a>
+        <a href="westbengal_c.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Culture</a>
+        <a href="westbengal_g.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Geography</a>
+    </div>
+    <div id="submenu2" style="display: none" class="sub">
+        <a href="kerela_t.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Tourism</a>
+        <a href="kerela_c.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Culture</a>
+        <a href="kerela_g.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Geography</a>
+    </div>
+
+
+
+    <div class="slideholder" style="margin-left:60px;margin-top:65px;overflow-y: hidden;overflow-x:hidden; width:auto+1380px;height:auto-20px;">
+
+        <font face="Trebuchet MS">
+
+            <span id="slide1"></span>
+            <span id="slide2"></span>
+            <span id="slide3"></span>
+            <span id="slide4"></span>
+            <div class="imageholder">
+                <img src="wb/kolkata.jpg" class="sliderimage">
+                <img src="wb/darjeeling.jpg" class="sliderimage">
+                <img src="wb/bankura.jpg" class="sliderimage">
+                <img src="wb/sunderbans.jpg" class="sliderimage">
+            </div>
+
+            <div class="buttonholder">
+                <a href="#slide1" class="button" onClick="javascript:onClick1()"></a>&nbsp; &nbsp;
+                <a href="#slide2" class="button" onClick="javascript:onClick2()"></a>&nbsp; &nbsp;
+                <a href="#slide3" class="button" onClick="javascript:onClick3()"></a>&nbsp; &nbsp;
+                <a href="#slide4" class="button" onClick="javascript:onClick4()"></a>&nbsp; &nbsp;
+                <button id="double_arrow" type="button" class="fa fa-angle-double-up" onClick="javascript:onClick5()" />
+            </div>
+
+            <font face="Arial">
+
+                <div id="change1" class="div1">
+
+
+                    Kolkata<br><br>
+
+                    Kolkata, the capital of West Bengal, is the largest metropolitan city in India. This ancient city is considered to be inhabited for more than two thousand years and it is evident from its rich cultural background and diverse
+                    ethnicity
+
+                </div>
+
+
+                <div id="change2" class="div1">
+
+                    Darjeeling<br><br>
+
+                    Darjeeling is the most perfect place to unwind on your holiday. <br>
+                    Snow clad mountains, lush greenery and the stunning views of Himalayas make the place a heaven on earth.
+
+                </div>
+
+
+                <div id="change3" class="div1">
+
+                    Bankura<br><br>
+
+                    Bankura is on the west of the state of West Bengal. Apart from the historic side, Bankura has an artistic face too. It has tourist attractions that boast of its historical importance and destinations that challenge you to trek
+                    and hike. <br>
+
+                </div>
+
+
+                <div id="change4" class="div1">
+
+                    Sundarban<br><br>
+
+                    Here is what makes West Bengal eligible for praises, the Sundarban. The world’s largest delta and also the largest Mangrove Forest
+
+                </div>
+            </font>
+
+            <div id="change5" class="div2">
+
+                <a class="close" onClick="javascript:onClick6()">Close &times;</a>
+                <br><br>
+
+                <hr color="ghostwhite">
+                <font face="Bookman" size="+2">Kolkata</font>
+                <hr color="ghostwhite">
+                <br>
+
+                <img src="wb/k.jpg" style="float: right;width:500;height:300">
+
+                Kolkata is the capital of the Indian state of West Bengal. Located on the east bank of the Hooghly River, it is the principal commercial, cultural, and educational centre of East India, while the Port of Kolkata is India's oldest
+                operating port and its sole major riverine port.
+
+                In 2011, the city had a population of 4.5 million, while the population of the city and its suburbs was 14.1 million, making it the third-most populous metropolitan area in India. Recent estimates of Kolkata Metropolitan Area's
+                economy have ranged from $60 to $150 billion (GDP adjusted for purchasing power parity) making it third most-productive metropolitan area in India, after Mumbai and Delhi.
+
+                <br><br><br><br><br><br>
+
+                <br>
+
+                <hr color="ghostwhite">
+                <font face="Bookman" size="+2">Darjeeling</font>
+                <hr color="ghostwhite">
+                <br>
+                Darjeeling is a town and a municipality in the Indian state of West Bengal. It is located in the Lesser Himalayas at an elevation of 6,700 ft (2,042.2 m).
+                <img src="wb/d.jpg" style="float: right;width:500;height:300">
+                It is noted for its tea industry, its spectacular views of the Kangchenjunga, the world's third-highest mountain, and the Darjeeling Himalayan Railway, a UNESCO World Heritage Site. Darjeeling is the headquarters of the Darjeeling
+                District which has a partially autonomous status within the state of West Bengal. It is also a popular tourist destination in India.
+
+                The recorded history of the town starts from the early 19th century when the colonial administration under the British Raj set up a sanatorium and a military depot in the region. Subsequently, extensive tea plantations were
+                established in the region and tea growers developed hybrids of black tea and created new fermentation techniques. The resultant distinctive Darjeeling tea is internationally recognised and ranks among the most popular black teas in
+                the world.
+
+                <br><br><br><br><br><br>
+
+                <br>
+                <hr color="ghostwhite">
+                <font face="Bookman" size="+2">Bankura</font>
+                <hr color="ghostwhite">
+                <br>
+                Bankura district is an administrative unit in the Indian state of West Bengal. It is part of Medinipur division—one of the five administrative divisions of West Bengal.
+                <img src="wb/b.jpg" style="float: right;width:500;height:300">
+                Bankura district is surrounded by Bardhaman district in the north, Purulia district in the west and Paschim Medinipur district in the south and some part of Hooghly district in the east. Damodar River flows in the northern part of
+                Bankura district and separates it with the major part of Burdwan district. The district head quarter is located in Bankura town.
+
+                The district has been described as the "connecting link between the plains of Bengal on the east and Chota Nagpur plateau on the west." The areas to the east and north-east are low-lying alluvial plains while to the west the surface
+                gradually rises, giving way to undulating country, interspersed with rocky hillocks.
+
+                <br><br><br><br><br><br>
+
+                <hr color="ghostwhite">
+                <font face="Bookman" size="+2">The Sundarbans</font>
+                <hr color="ghostwhite">
+                <br>
+                <img src="wb/sunderban2.jpg" style="float: right;width:500;height:300">
+
+                The Sundarbans is a vast forest in the coastal region of the Bay of Bengal, considered one of the natural wonders of the world, it was recognised in 1997 as a UNESCO World Heritage Site. Located in the delta region of Padma, Meghna
+                and Brahmaputra river basins, this unique forest area extends across South 24 Parganas and, North 24 Parganas districts of West Bengal State, India and Khulna, Satkhira, Bagerhat districts of Bangladesh. The Sundarbans is the world's
+                largest coastal mangrove forest, with an area of approximately 10,000 sq km; of which approximately 6,000 sq km is situated in Bangladesh and approximately 4,000 sq km in India. The Bangladeshi and Indian parts of the Sundarbans,
+                while in fact adjacent parts of the uninterrupted landmark, have been listed separately in the UNESCO World Heritage List: as "Sundarbans" and "Sundarban National Park" respectively. The Sundarbans are a network of marine streams,
+                mud shores and mangrove forests. The region is known to contain numerous species of animals, birds and reptiles, including Royal Bengal Tiger, Chital Deer, Crocodile and Snakes . On 21 May 1992, the Sundarbans was recognized as a
+                Ramsar Site of ecological importance.
+                <br>
+
+
+            </div>
+
+
+
+    </div>
+
+
+
+    </font>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesForm.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i' rel='stylesheet' type='text/css'>
+    <style>
+
+
+        h1
+{
+position: fixed;
+background-color: whitesmoke;
+height:65px;
+border-bottom: 5px solid black;
+width:100%;
+z-index: 999;
+text-align: center;
+color: black;
+}
+
+#bars1
+{
+	font-size:30px;
+	background-color: white;
+	padding:10px;
+	width: 35px;
+	height: 30px;
+}
+
+</style>
+
+    <title>
+        Form
+    </title>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#datepicker").datepicker();
+        });
+
+        $(document).ready(function() {
+            $("#datepicker1").datepicker();
+        });
+    </script>
+    <script type="text/javascript">
+        function validateForm() {
+            var Destination = document.Yatra.destination;
+            var Depart_date = document.Yatra.depart_date;
+            var Return_date = document.Yatra.return_date;
+            var Nights = document.Yatra.nights;
+            var First = document.Yatra.first;
+            var Last = document.Yatra.last;
+            var User = document.Yatra.user;
+            var Pass = document.Yatra.pass;
+            var Confirm = document.Yatra.confirm;
+            var Num = document.Yatra.num;
+            var Email = document.Yatra.email;
+            if (Destination.selectedIndex < 1) {
+                window.alert("Please choose a destination");
+
+                return false;
+
+            }
+            if (Depart_date.value == "") {
+                window.alert("Please enter valid departure date");
+                return false;
+            }
+            if (Return_date.value == "") {
+                window.alert("Please enter valid return date");
+                return false;
+            }
+            if (Nights.selectedIndex < 1) {
+                window.alert("Please choose no. of nights");
+                return false;
+
+            }
+            if (First.value == "") {
+                window.alert("Please enter your first name");
+                First.focus();
+                return false;
+            }
+
+            if (Last.value == "") {
+                window.alert("Please enter your last name");
+                Last.focus();
+                return false;
+            }
+
+            if (User.value == "") {
+                window.alert("Please enter your desired user name");
+                User.focus();
+                return false;
+            }
+            if (Pass.value != Confirm.value) {
+                window.alert("Please re enter the password correctly");
+
+                return false;
+            }
+            if (Destination.selectedIndex < 1) {
+                window.alert("Please choose destination");
+                return false;
+
+            }
+
+            if (document.Yatra.male.checked == false && document.Yatra.female.checked == false) {
+                window.alert("Please enter your gender");
+                return false;
+            }
+            if (Num.value == "") {
+                window.alert("Please enter your phone number");
+                Num.focus();
+                return false;
+            }
+            if (Email.value == "") {
+                window.alert("Please enter your email id");
+                Email.focus();
+                return false;
+            }
+            if (Email.value.indexOf("@", 0) < 0) {
+                window.alert("Please enter valid email id");
+                Email.focus();
+                return false;
+            }
+            if (Num.length < 10) {
+                window.alert("Please enter valid phone number");
+                Num.focus();
+                return false;
+            }
+
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <script src="javascriptForm.js"></script>
+
+    <div style="height:20px;margin-top: 0px">
+        <h1>Create your Account</h1>
+    </div>
+
+
+    <div id="menu" class="slidenav">
+        <a href="javascript:void(0)" onClick="closeNav()">Close &times;</a>
+
+
+        <a href="./westbengal_t.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; West Bengal &nbsp; &nbsp; &nbsp;
+            &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+        <a href="./kerela_t.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Kerela &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+        <a href="form.html" class="active"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Form &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+        <a href="../About.html"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; About &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+    </div>
+
+    <div id="main">
+        <button onClick="openNav()"><i id="bars" class="fa fa-bars"></i></button>
+    </div>
+
+
+    <div id="submenu1" style="display: none" class="sub">
+        <a href="./westbengal_t.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Tourism</a>
+        <a href="./westbengal_c.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Culture</a>
+        <a href="./westbengal_g.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Geography</a>
+    </div>
+    <div id="submenu2" style="display: none" class="sub">
+        <a href="./kerela_t.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Tourism</a>
+        <a href="./kerela_c.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Culture</a>
+        <a href="./kerela_g.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Geography</a>
+    </div>
+
+
+
+    <div class="slideholder" style="margin-left:60px;margin-top:65px;overflow-y: hidden;overflow-x:hidden; width:auto+1380px;height:auto-20px;">
+        <br>
+
+        <font face="Product Sans" color="black" size="+1">
+            <form name="Yatra" method="post" onsubmit="return validateForm()">
+                <center>
+                    <p class="white">
+                        Enter departure date
+                        <input id="datepicker" />
+                        Enter return date
+                        <input id="datepicker1" />
+                        <br>
+                        <br>
+                        Enter first name &nbsp &nbsp &nbsp &nbsp &nbsp
+
+                        <input type="text" name="first">
+                        Enter last name &nbsp
+                        <input type="text" name="last">
+                        <br>
+                        <br>
+                        Choose your username
+                        <input type="text" name="user">
+                        <br>
+                        <br>
+
+                        Create a password
+                        <input type="password" name="pass">
+                        <br>
+                        <br>
+                        Confirm your password
+                        <input type="password" name="confirm">
+                        <br>
+                        <br>
+                        Select Desination
+                        <select type="text" value="" name="destination">
+                            <option></option>
+                            <option>Rajasthan</option>
+                            <option>Kashmir</option>
+                        </select>
+
+                        Select no. of nights
+                        <select type="text" value="" name="nights">
+                            <option></option>
+                            <option>Less than 3</option>
+                            <option>3 to 7</option>
+                            <option>More than</option>
+
+                        </select>
+
+                        <br>
+                        <br>
+
+                        Please specify your gender
+                        <br>
+                        <input type="radio" name="male" value="Male">
+                        Male
+                        <input type="radio" name="female" value="Female">
+                        Female
+                        <br>
+                        <br>
+                        Enter phone number
+                        <input type="number" name="num">
+                        <br>
+                        <br>
+                        Your current email id
+                        <input type="email" name="email">
+                        <br>
+                        <br>
+                        <center>
+                            <input type="submit" value="Send" name="submit">
+                            <input type="reset" value="Reset" name="reset">
+                    </p>
+                </center>
+                </center>
+            </form>
+    </div>
+</body>
+
+</html>

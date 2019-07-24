@@ -1,0 +1,163 @@
+<html>
+
+<head>
+    <title>
+        West Bengal
+    </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        h1 {
+            position: fixed;
+            background-color: whitesmoke;
+            height: 65px;
+            border-bottom: 5px solid black;
+            width: 100%;
+            z-index: 999;
+            text-align: center;
+            color: black;
+        }
+
+        .slide1 {
+            display: none;
+        }
+
+        .div1 {
+            margin-left: 70px;
+            margin-top: -400px;
+            height: 250px;
+            width: 600px;
+            position: relative;
+            font-size: 20;
+            color: white;
+        }
+
+        .div2 {
+            margin-left: 70px;
+            margin-top: -450px;
+            height: 250px;
+            width: 600px;
+            position: relative;
+            font-size: 20;
+            color: white;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body bgcolor="	#E0FFFF">
+
+
+    <script src="javascript.js"></script>
+
+    <div style="height:20px;margin-top: -22px">
+        <h1>Tourism India</h1>
+    </div>
+
+
+    <div id="menu" class="slidenav">
+        <a href="javascript:void(0)" onClick="closeNav()">Close &times;</a>
+
+
+        <a href="westbengal_t.html" class="active" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; West Bengal &nbsp; &nbsp; &nbsp;
+            &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+        <a href="kerela_t.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Kerela &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+        <a href="./form.html"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Form &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+        <a href="./About.html"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; About &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+    </div>
+
+    <div id="main">
+        <button onClick="openNav()"><i id="bars" class="fa fa-bars"></i></button>
+    </div>
+
+
+    <div id="submenu1" style="display: none" class="sub">
+        <a href="westbengal_t.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Tourism</a>
+        <a href="westbengal_c.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Culture</a>
+        <a href="westbengal_g.html" class="active" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Geography</a>
+    </div>
+    <div id="submenu2" style="display: none" class="sub">
+        <a href="kerela_t.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Tourism</a>
+        <a href="kerela_c.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Culture</a>
+        <a href="kerela_g.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Geography</a>
+    </div>
+
+
+    <div class="slideholder" style="margin-left:60px;margin-top:65px;overflow-y: hidden;overflow-x:hidden; width:1380px;height:731px;background-color: green;">
+
+        <img class="slide1" src="wb/back1.jpg" style="width:100%;height:100%">
+        <img class="slide1" src="wb/back2.jpg" style="width:100%;height:100%">
+
+        <div class="div1">
+
+            <font style="font-size: 30;">
+                Climate<br><br>
+            </font>
+
+            West Bengal's climate varies from tropical savanna in the southern portions to humid subtropical in the north. The main seasons are summer, the rainy season, a short autumn, and winter. While the summer in the delta region is noted for
+            excessive humidity, the western highlands experience a dry summer like northern India, with the highest daytime temperature ranging from 38 °C (100 °F) to 45 °C (113 °F). At night, a cool southerly breeze carries moisture from the Bay of
+            Bengal. In early summer, brief squalls and thunderstorms known as Kalbaisakhi, or Nor'westers, often occur.
+            <br><br>
+
+            <br><br><br><br>
+
+        </div>
+
+        <div class="div2">
+
+            <font style="font-size: 30;">
+                Geography<br><br>
+            </font>
+
+            Geography of West Bengal, a state in eastern India, is diverse, of high peaks of Himalaya in the northern extremes to coastal regions down south, with regions such as plateau and Ganges delta intervening in between. West Bengal is only
+            state in India where Himalayas are in the north and sea is at the south, with both plains and plateaus covering the remaining region.
+            <br><br>
+
+            <br><br><br><br>
+
+        </div>
+
+
+
+        <font face="Trebuchet MS">
+
+
+        </font>
+
+        <script>
+            var myIndex = 0;
+            slideshow1();
+
+            function slideshow1() {
+                var i;
+                var x = document.getElementsByClassName("slide1");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) {
+                    myIndex = 1;
+                }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(slideshow1, 3000);
+            }
+        </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #bars1 {
+            font-size: 30px;
+            background-color: white;
+            padding: 10px;
+            width: 50px;
+            height: 50px;
+
+        }
+
+        h1 {
+            position: fixed;
+            background-color: whitesmoke;
+            height: 65px;
+            border-bottom: 5px solid black;
+            width: 100%;
+            z-index: 999;
+            text-align: center;
+            color: black;
+        }
+
+
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        .container1 {
+            position: relative;
+            width: 50%;
+        }
+
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #008CBA;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .container1:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+
+    <title>
+        About
+    </title>
+    <link rel="stylesheet" type="text/css" href="stylesAbout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+</head>
+
+<body background="backA.jpg">
+
+    <script src="javascriptAbout.js"></script>
+
+    <div style="height:20px;margin-top: -22px">
+        <h1>Tourism India</h1>
+    </div>
+
+    <font face="Trebuchet MS">
+
+        <div id="menu" class="slidenav">
+            <a href="javascript:void(0)" onClick="closeNav()">Close &times;</a>
+
+
+            <a href="./westbengal_t.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; West Bengal &nbsp; &nbsp; &nbsp;
+                &nbsp;
+                <id="arrow" class="fa fa-caret-right"></a>
+
+            <a href="./kerela_t.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Kerela &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <id="arrow" class="fa fa-caret-right"></a>
+
+            <a href="./form.html"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Form &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <id="arrow" class="fa fa-caret-right"></a>
+
+            <a href="./About.html" class="active"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; About &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <id="arrow" class="fa fa-caret-right"></a>
+
+        </div>
+
+        <div id="main">
+            <button onClick="openNav()"><i id="bars1" class="fa fa-bars"></i></button>
+        </div>
+
+
+        <div id="submenu1" style="display: none" class="sub">
+            <a href="./westbengal_t.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Tourism</a>
+            <a href="./westbengal_c.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Culture</a>
+            <a href="./westbengal_g.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Geography</a>
+        </div>
+        <div id="submenu2" style="display: none" class="sub">
+            <a href="./kerela_t.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Tourism</a>
+            <a href="./kerela_c.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Culture</a>
+            <a href="./kerela_g.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Geography</a>
+        </div>
+
+    </font>
+
+    <div style="padding:100px;margin-left:-5px;overflow-y: hidden;height: 100%;overflow-x: scroll">
+
+        <br>
+        <br>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="background.jpg" style="width:100%">
+                <div class="text">Kerela</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="background1.jpg" style="width:100%">
+                <div class="text">Kashmir</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="background2.jpg" style="width:100%">
+                <div class="text">Rajasthan</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+
+        <p class="quote">
+
+            We are a leading online travel company in India and committed to our mission of “creating happy travelers.” Through our website, www.yatra.com, our mobile applications and our other associated platforms, leisure and business travelers
+            can explore, research, compare prices and book a wide range of services catering to their travel needs. Since our inception in 2006, more than 4 million customers have used one or more of our comprehensive travel-related services, which
+            include domestic and international air ticketing, hotel bookings, homestays, holiday packages, bus ticketing, rail ticketing, activities and ancillary services. With over 61,000 hotels contracted in over 1,100 cities across India, we are
+            India’s largest platform for domestic hotels.
+
+            A strong and "trusted" travel brand of India, our strengths include a large and loyal customer base, a multi-channel platform for leisure and business travelers, a robust mobile eco-system for a spectrum of travelers and suppliers, a
+            strong technology platform designed to deliver a high level of scalability and innovation and a seasoned senior management team comprising of industry executives with deep roots in the travel industry in India and abroad.
+        </p>
+
+
+
+
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+
+    </div>
+
+
+</body>
+
+</html>

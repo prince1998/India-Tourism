@@ -1,0 +1,455 @@
+<html>
+
+<head>
+    <title>
+        Kerela
+    </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+
+        #double_arrow
+			{
+
+					font-size:30px;
+					border:none;
+					outline: none;
+					background-color: transparent;
+					color: white;
+					font-size: 40;
+
+			}
+
+			.slideholder
+			{
+				width:1380px;
+				height:731px;
+				margin-left: auto;
+				margin-right: auto;
+				overflow:hidden;
+			}
+			.imageholder
+			{
+				width:10000px;
+				height:731px;
+				clear:both;
+				position: relative;
+
+				-webkit-transition: left 2s;
+				-moz-transition: left 2s;
+				-o-transition: left 2s;
+				transition: left 2s
+			}
+			.sliderimage
+			{
+				float:left;
+				position: relative;
+				max-width:100%;
+				max-height: 100%;
+			}
+			.buttonholder
+			{
+				position:relative;
+				top:-110px;
+				text-align: center;
+			}
+			.button
+			{
+				display:inline-block;
+				background-color: white;
+				border-radius: 15px;
+				height: 30px;
+				width: 30px;
+			}
+			.button:hover
+			{
+				background-color: black;
+			}
+
+		#slide1:target~ .imageholder
+        {
+            left: 0px;
+        }
+
+        #slide2:target~ .imageholder
+        {
+            left: -1380px;
+        }
+
+        #slide3:target~ .imageholder
+        {
+            left: -2760px;
+        }
+	    #slide4:target~ .imageholder
+        {
+            left: -4140px;
+        }
+		h1
+		{
+			position: fixed;
+			background-color: whitesmoke;
+			height:65px;
+			border-bottom: 5px solid black;
+			width:100%;
+			z-index: 999;
+			text-align: center;
+			color: black;
+		}
+
+		.div1
+		{
+			display: none;
+			margin-left: 70px;
+			margin-top: -550px;
+			height:250px;
+			width: 250px;
+			position: absolute;
+			font-size: 20;
+			color: white;
+			transition: margin-right 0.5s
+		}
+
+		.div2
+		{
+			height:0px;
+			width:0px;
+			position: absolute;
+			transition: 0.5s;
+			background-image: url(New-edited/div_back.jpg);
+			margin-top: 550px;
+			overflow-x: scroll;
+			font-size: 20;
+			color: white;
+		}
+
+
+		.info
+		{
+				display:inline-block;
+				background-color: white;
+				height: 40px;
+				width: 40px;
+				text-decoration: none;
+				text-align: center;
+				color: black;
+		}
+
+		.close
+		{
+				display:inline-block;
+				background-color: white;
+				height: 50px;
+				width: 60px;
+				text-decoration: none;
+				text-align: center;
+				color: black;
+				position: fixed;
+		}
+		.close:hover
+		{
+				background-color: black;
+				color: white;
+		}
+
+
+	</style>
+
+
+    <script>
+
+
+        function onClick1()
+			{
+				document.getElementById("change1").style.display = "block";
+				document.getElementById("change2").style.display = "none";
+				document.getElementById("change3").style.display = "none";
+				document.getElementById("change4").style.display = "none";
+			}
+			function onClick2()
+			{
+				document.getElementById("change1").style.display = "none";
+				document.getElementById("change2").style.display = "block";
+				document.getElementById("change3").style.display = "none";
+				document.getElementById("change4").style.display = "none";
+			}
+			function onClick3()
+			{
+				document.getElementById("change2").style.display = "none";
+				document.getElementById("change3").style.display = "block";
+				document.getElementById("change1").style.display = "none";
+				document.getElementById("change4").style.display = "none";
+			}
+			function onClick4()
+			{
+				document.getElementById("change4").style.display = "block";
+				document.getElementById("change2").style.display = "none";
+				document.getElementById("change3").style.display = "none";
+				document.getElementById("change1").style.display = "none";
+			}
+			function onClick5()
+			{
+				var a = document.getElementById("change5");
+				a.style.width = "1380px";
+				a.style.height = "731px";
+				a.style.marginTop = "-765px";
+			}
+			function onClick6()
+			{
+				var a = document.getElementById("change5");
+				a.style.width = "0px";
+				a.style.height = "0px";
+				a.style.marginTop = "550px";
+			}
+
+		</script>
+
+
+</head>
+
+<body bgcolor="	#E0FFFF" onLoad="javascript:onClick1()">
+
+
+    <script src="javascript.js"></script>
+
+    <div style="height:20px;margin-top: -22px">
+        <h1>Tourism India</h1>
+    </div>
+
+
+    <div id="menu" class="slidenav">
+        <a href="javascript:void(0)" onClick="closeNav()">Close &times;</a>
+
+
+        <a href="westbengal_t.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; West Bengal &nbsp; &nbsp; &nbsp;
+            &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+        <a href="kerela_t.html" class="active" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Kerela &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+        <a href="./form.html"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Form &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+        <a href="./About.html"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; About &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <id="arrow" class="fa fa-caret-right"></a>
+
+    </div>
+
+    <div id="main">
+        <button onClick="openNav()"><i id="bars" class="fa fa-bars"></i></button>
+    </div>
+
+
+    <div id="submenu1" style="display: none" class="sub">
+        <a href="westbengal_t.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Tourism</a>
+        <a href="westbengal_c.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Culture</a>
+        <a href="westbengal_g.html" onMouseOver="javascript:showsubmenu1()" onMouseOut="javascript:hidesubmenu1()">Geography</a>
+    </div>
+    <div id="submenu2" style="display: none" class="sub">
+        <a href="kerela_t.html" class="active" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Tourism</a>
+        <a href="kerela_c.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Culture</a>
+        <a href="kerela_g.html" onMouseOver="javascript:showsubmenu2()" onMouseOut="javascript:hidesubmenu2()">Geography</a>
+    </div>
+
+
+    <div class="slideholder" style="margin-left:60px;margin-top:65px;overflow-y: hidden;overflow-x:hidden; width:auto+1380px;height:auto-20px;">
+
+        <font face="Trebuchet MS">
+
+            <span id="slide1"></span>
+            <span id="slide2"></span>
+            <span id="slide3"></span>
+            <span id="slide4"></span>
+            <div class="imageholder">
+                <img src="New-edited/kumarakom.jpg" class="sliderimage">
+                <img src="New-edited/munnar.jpg" class="sliderimage">
+                <img src="New-edited/kovalam.jpg" class="sliderimage">
+                <img src="New-edited/backwaters_1.jpg" class="sliderimage">
+            </div>
+
+            <div class="buttonholder">
+                <a href="#slide1" class="button" onClick="javascript:onClick1()"></a>&nbsp; &nbsp;
+                <a href="#slide2" class="button" onClick="javascript:onClick2()"></a>&nbsp; &nbsp;
+                <a href="#slide3" class="button" onClick="javascript:onClick3()"></a>&nbsp; &nbsp;
+                <a href="#slide4" class="button" onClick="javascript:onClick4()"></a>&nbsp; &nbsp;
+                <button id="double_arrow" type="button" class="fa fa-angle-double-up" onClick="javascript:onClick5()" />
+            </div>
+
+            <font face="Arial">
+
+                <div id="change1" class="div1">
+
+
+                    Kumarakom<br><br>
+
+                    Situated on the banks of Vembanad Lake, <br>
+                    Kumarakom is a cluster of many small man-made <br>
+                    islands reclaimed from the lake.
+
+                </div>
+
+
+                <div id="change2" class="div1">
+
+                    Munnar<br><br>
+
+                    Situated on the banks of three rivers- Madupetti, <br>
+                    Nallathanni and Periavaru, Munnar is an idyllic hill station, <br>
+                    famous for its tea estates, exotic scenery, abundance of <br>
+                    flora and fauna and craggy peaks.
+
+                </div>
+
+
+                <div id="change3" class="div1">
+
+                    Kovalam<br><br>
+
+                    An idyllic village along the coastlines of the Arabian Sea, <br>
+                    Kovalam is most famous for its three pristine beaches with <br>
+                    shallow waters and low tidal waves where one can go surfing, <br>
+                    wooden and motor boat riding. <br>
+
+                </div>
+
+
+                <div id="change4" class="div1">
+
+                    Alleppey backwaters<br><br>
+
+                    Famous backwaters of God's own country, Kerela, <br>
+                    the city of Alleppey is known for its beaches, temples, <br>
+                    boat races and Ayurvedic spa and wellness centers.
+
+                </div>
+            </font>
+
+            <div id="change5" class="div2">
+
+                <a class="close" onClick="javascript:onClick6()">Close &times;</a>
+                <br><br>
+
+                <hr color="ghostwhite">
+                <font face="Bookman" size="+2">Kumarakom</font>
+                <hr color="ghostwhite">
+                <br>
+                Kumarakom is a popular tourism destination located near the city of Kottayam (16 kilometres), in Kerala, India, famous for its backwater tourism.It is set in the backdrop of the Vembanad Lake, the largest lake in the state of Kerala.<br>
+                <img src="New-edited/kumarakom2.jpg" style="float: right;width:500;height:300">
+
+                Tourism sightseeing -
+
+                Traditional boats moored at a lagoon
+                Tourism in Kumarakom largely revolves -around the backwaters of the Vembanad Lake. Several luxury and budget resorts lined up on the shores of the lake provide tourists with facilities for boating, yachting and fishing, with
+                panoramic views of the lake. The other major attraction is the Bird Sanctuary, which is open from 6 am to 6 pm and can be visited by canoes arranged by local fishermen at the entrance to the sanctuary. A two-hour rowing canoe trip is
+                quite cheap, and is best undertaken in the evening or early morning to avoid the afternoon sun.<br>
+
+                Furthermore, the Aruvikkuzhi Waterfall and its surrounding rubber plantation are a photographer's delight. There is also the Bay Island Drift Museum near the Kumarakom beach for history lovers, open from 10 am – 5 pm on Tuesdays –
+                Saturdays and from 11.30 am – 5 pm on Sundays.<br>
+
+
+                Kumarakom is home to a wide variety of flora and fauna. Kumarakom Bird Sanctuary is a noted bird sanctuary where many species of migratory birds visit. The Vembanad Lake, the largest backwater in Kerala, is habitat for many marine
+                and freshwater fish species and it teems with Karimeen (Pearl spot also known as Etroplus suratensis) shrimp (Metapenaeus dobsonii) common name Poovalan chemeen. The bird sanctuary extends over 14 acres (57,000 m²), and came into
+                existence following preservation efforts from the government. It is a major tourist attraction.<br>
+
+                <br>
+
+                <hr color="ghostwhite">
+                <font face="Bookman" size="+2">Munnar</font>
+                <hr color="ghostwhite">
+                <br>
+                Munnar (Malayalam: മൂന്നാർ) is a town and hill station located in the Idukki district of the southwestern Indian state of Kerala. Munnar is situated at around 1,600 metres (5,200 ft) above mean sea level, in the Western Ghats range
+                of mountains.<br>
+                <img src="New-edited/munnar2.jpg" style="float: right;width:500;height:300">
+                Location -
+                Geographic coordinates of Munnar is 10°05′21″N 77°03′35″E. Munnar town is situated on the Kannan Devan Hills village in Devikulam taluk and is the largest panchayat in the Idukki district covering an area of nearly 557 square
+                kilometres (215 sq mi).[citation needed]<br>
+
+                Road<br>
+
+                Munnar KSRTC bus stand<br>
+                Munnar is well connected by both National highways, state highways and rural roads. The town lies in the Kochi - Dhanushkodi National highway (N.H 49), about 130 km (81 mi) from Cochin, 31 km (19 mi) from Adimali, 85 km (53 mi) from
+                Udumalpettu in Tamil Nadu and 60 km (37 mi) from Neriyamangalam.<br>
+
+                Distance from major cities<br>
+
+                from Kochi - Ernakulam - 150 km<br>
+                Railway<br>
+                The nearest major railway stations are at Ernakulam and Aluva (approximately 140 kilometres (87 mi) by road). The Nearest Functioning Railway station is at Udumalaipettai.<br>
+
+                Airport<br>
+                The nearest airport is Cochin International Airport, which is 110 kilometres (68 mi) away. The Coimbatore and Madurai airports is 165 km from Munnar.<br>
+
+                Most of the native flora and fauna of Munnar have disappeared due to severe habitat fragmentation resultant from the creation of the plantations. However, some species continue to survive and thrive in several protected areas nearby,
+                including the new Kurinjimala Sanctuary to the east, the Chinnar Wildlife Sanctuary, Manjampatti Valley and the Amaravati reserve forest of Indira Gandhi Wildlife Sanctuary to the north east, the Eravikulam National Park and Anamudi
+                Shola National Park to the north, the Pampadum Shola National Park to the south and the proposed Palani Hills National Park to the east.<br>
+
+                <br>
+                <hr color="ghostwhite">
+                <font face="Bookman" size="+2">Kovalam</font>
+                <hr color="ghostwhite">
+                <br>
+                Beaches<br>
+                Kovalam has three beaches separated by rocky outcroppings in its 17 km coastline, the three together form the famous crescent of the Kovalam beach.<br>
+                <img src="New-edited/kovalam2.jpg" style="float: right;width:500;height:300">
+
+                Lighthouse Beach<br>
+                The southernmost beach, the Lighthouse Beach is the one most frequented by tourists, Lighthouse Beach got its name due to the old Vizhinjam Lighthouse located on a 35 meter high on top of the Kurumkal hillock. The lighthouse is built
+                using stones, is colored in red and white bands and enjoys a height of 118 feet. It's intermittent beams at night render the beach with an unearthly charm.<br>
+                Hawah Beach<br>
+                Eve’s Beach, more commonly known as Hawa Beach, ranks second, in the early day, is a beehive of activities with fishermen setting out for sea. With a high rock promontory and a calm bay of blue waters, this beach paradise creates a
+                unique aquarelle on moonlit nights.<br>
+                Samudra Beach<br>
+                A large promontory separates this part from the southern side. Samudra Beach doesn't have tourists thronging there or hectic business. The local fishermen ply their trade on this part.
+                Detour past Kovalam junction to land on Samudra Beach which is to the north of Ashoka Beach. One has the option to walk along the sea-wall too.The sight of the waves lashing on the rocks below is awesome.<br>
+
+                Shallow waters stretching for hundreds of metres are ideal for swimming. The beaches have steep palm covered headlands and are lined with shops that offer all kinds of goods and services.<br>
+
+
+                Evening time view of the beach<br>
+                The larger of the beaches is called Lighthouse Beach for its 35 metre high light house which towers over it atop Kurumkal hillock. The second largest one is Hawah Beach named thus for the topless European women who used to throng
+                there. It was the first topless beach in India.[citation needed] However topless bathing is banned now except in private coves owned by resorts. Visitors frequent these two beaches. The northern part of the beach is known as Samudra
+                Beach in tourism parlance. A large promontory separates this part from the southern side. Samudra Beach doesn't have tourists thronging there or hectic business. The local fishermen ply their trade on this part. The sands on the
+                beaches in Kovalam are partially black in colour due to the presence of ilmenite and Monazite. The normal tourist season is from September to May. Ashoka beach is also the part of Kovalam beach.
+                <br><br>
+
+                <hr color="ghostwhite">
+                <font face="Bookman" size="+2">Kerala backwaters</font>
+                <hr color="ghostwhite">
+                <br>
+                <img src="New-edited/backwaters2.jpg" style="float: right;width:500;height:300">
+
+                The Kerala backwaters are a chain of brackish lagoons and lakes lying parallel to the Arabian Sea coast (known as the Malabar Coast) of Kerala state in southern India. The network includes five large lakes linked by canals, both man
+                made and natural, fed by 38 rivers, and extending virtually half the length of Kerala state. The backwaters were formed by the action of waves and shore currents creating low barrier islands across the mouths of the many rivers
+                flowing down from the Western Ghats range.<br>
+
+                The Kerala Backwaters are a network of interconnected canals, rivers, lakes and inlets, a labyrinthine system formed by more than 900 km of waterways, and sometimes compared to the American Bayou.In the midst of this landscape there
+                are a number of towns and cities, which serve as the starting and end points of backwater cruises.National Waterway 3 from Kollam to Kottapuram, covers a distance of 205 km and runs almost parallel to the coast line of southern
+                Kerala facilitating both cargo movement and backwater tourism. The important rivers from north to south are the Valapattanam river (110 km.), Chaliar (69 km.), Kadalundipuzha (130 km.), Bharathapuzha (209 km.), Chalakudy river (130
+                km.), Periyar (244 km), Pamba (176 km), Achancoil (128 km.) and Kalladayar (121 km.). Other than these, there are 35 more small rivers and rivulets flowing down from the Ghats. Most of these rivers are navigable up to the midland
+                region, in country crafts.<br>
+
+                Vembanad is the largest of the lakes, covering an area of 2033 km². The lake has a large network of canals that meander through the region of Kuttanad.<br>
+
+                The backwaters have a unique ecosystem: freshwater from the rivers meets the seawater from the Arabian Sea. A barrage has been built near Thanneermukkom, so salt water from the sea is prevented from entering the deep inside, keeping
+                the fresh water intact. Such fresh water is extensively used for irrigation purposes.<br>
+
+                Many unique species of aquatic life including crabs, frogs and mudskippers, water birds such as terns, kingfishers, darters and cormorants, and animals such as otters and turtles live in and alongside the backwaters. Palm trees,
+                pandanus shrubs, various leafy plants and bushes grow alongside the backwaters, providing a green hue to the surrounding landscape.<br>
+                <br>
+
+
+            </div>
+
+
+
+    </div>
+
+
+
+    </font>
+
+</body>
+
+</html>
